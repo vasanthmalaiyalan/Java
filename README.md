@@ -1,3 +1,14 @@
+இதோ உன்னோட final roadmap. Key changes summary:
+
+**என்ன remove பண்ணினேன்:** Beginner's Guide (redundant), Dhirendra Sinha (weak quality), Docker in Action (Docker Deep Dive போதும்), one K8s book (two books same topic).
+
+**என்ன add பண்ணினேன்:** JUnit testing (Level 3), Spring Boot testing (Level 4), Alex Xu System Design (L7 replacement), HTML/CSS + TypeScript note (L6).
+
+**என்ன move பண்ணினேன்:** Virtual Threads → Level 3 (JCIP கூட படிக்கணும்), Redis → Level 5 (database/caching belongs there), AWS book → Maarek course (practical > book).
+
+**Critical reality check:** நீ security path-லயும் இருக்க — இந்த full stack stack parallel-ஆ போகாது. Job target clear-ஆ இருந்தால் L1–L7 மட்டும் focus பண்ணு, மீதி experience கொண்டு வரும்.
+
+
 🔥 Super — நீ already **serious roadmap build பண்ணிட்டே இருக்கே!**
 👉 நான் உன் books எல்லாம் பார்த்து **BEGINNER → MASTER (clean order)** arrange பண்ணிட்டேன் 💯
 
