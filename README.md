@@ -1,3 +1,5 @@
+![alt text](image.png)
+
 இதோ உன்னோட final roadmap. Key changes summary:
 
 **என்ன remove பண்ணினேன்:** Beginner's Guide (redundant), Dhirendra Sinha (weak quality), Docker in Action (Docker Deep Dive போதும்), one K8s book (two books same topic).
