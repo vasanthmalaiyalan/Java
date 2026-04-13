@@ -150,3 +150,6 @@ Applets ❌ → Web Start ❌ → Modern tools (jlink, jpackage) ✔️
 நீங்க next 👉
 **Java buzzwords deep + interview level explanation** அல்லது
 **First Java program (Hello World internal breakdown)** வேண்டும்னா சொல்லுங்க 😎
+
+----------------
+
