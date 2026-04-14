@@ -10,7 +10,7 @@ class IfDemo {
 
         if(a == b) System.out.println("you won't see this");
 
-        System.out.println() //just black space
+        System.out.println(); //just black space
 
         c = a - b; // -1
 
@@ -29,3 +29,13 @@ class IfDemo {
         if(c < 0) System.out.println("c is negative");
     }
 }
+
+/*
+a is less than b
+
+C contains -1
+c is negative
+
+c contains 1
+c is non-negative
+*/
