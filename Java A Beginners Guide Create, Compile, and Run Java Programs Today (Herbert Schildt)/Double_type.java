@@ -19,3 +19,11 @@ class Double_type {
         System.out.println("x after division " + x);
     }
 }
+
+/*
+Original value of v: 10
+Original value of x: 10.6
+
+v after division 2
+x after division 2.65
+*/
