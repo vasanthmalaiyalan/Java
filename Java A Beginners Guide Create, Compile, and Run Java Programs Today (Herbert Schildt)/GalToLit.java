@@ -11,3 +11,7 @@ class GalToLit {
         System.out.println(gallons + " gallons is " + liters + " liters. ");
     }
 }
+
+/*
+10.0 gallons is 37.854 liters. 
+*/
