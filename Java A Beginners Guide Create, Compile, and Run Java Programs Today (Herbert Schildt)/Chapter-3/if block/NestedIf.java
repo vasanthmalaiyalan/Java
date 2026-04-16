@@ -1,4 +1,4 @@
-class Guess3 {
+class NestedIf {
     public static void main(String[] args)
       throws java.io.IOException {
 
