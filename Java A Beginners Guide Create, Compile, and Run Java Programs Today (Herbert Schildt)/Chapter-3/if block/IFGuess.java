@@ -1,4 +1,4 @@
-class Guess {
+class IFGuess {
     public static void main(String[] args)
       throws java.io.IOException {
 
