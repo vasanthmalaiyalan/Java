@@ -106,3 +106,97 @@ Vehicle minivan = new Vehicle();
 
 வேணும்னா next:
 👉 “memoryல எப்படி இருக்கும் (diagram)” explain பண்ணட்டா? 😎
+
+ஆமாம் 👍 **correct புரிஞ்சிருக்கே** — அதை clearஆ சொல்றேன் 👇
+
+---
+
+## 🧠 Statement:
+
+```java
+Vehicle minivan = new Vehicle();
+```
+
+---
+
+## 🔍 Breakdown
+
+👉 இதில்:
+
+* `Vehicle` → **class name (data type)**
+* `minivan` → **variable name (reference variable)**
+* `new Vehicle()` → **object create பண்ணும்**
+
+---
+
+## ❓ உன் question:
+
+> object variableக்கு முன்னாடி class name போடணுமா?
+
+👉 ✅ **ஆம், கண்டிப்பா போடணும்**
+
+---
+
+## 🔥 ஏன்?
+
+👉 Javaல:
+
+* variable declare பண்ணும்போது
+  👉 அதன் **type சொல்லணும்**
+
+📌 Example:
+
+```java
+int x = 10;
+```
+
+👉 இதுபோலவே:
+
+```java
+Vehicle minivan = new Vehicle();
+```
+
+👉 இங்கே:
+
+* `Vehicle` = type
+* `minivan` = variable
+
+---
+
+## ⚡ Simple compare
+
+| Normal variable | Object                           |
+| --------------- | -------------------------------- |
+| int x = 10;     | Vehicle minivan = new Vehicle(); |
+
+👉 இரண்டிலும்:
+
+* type முன்னாடி வரும்
+
+---
+
+## ❌ தவறானது
+
+```java
+minivan = new Vehicle(); // ❌ error (declare செய்யல)
+```
+
+👉 ஏன்?
+
+* type சொல்லல
+
+---
+
+## 🧠 One-line புரிதல்
+
+👉
+**Object variable declare பண்ணும்போது → class name (type) முன்னாடி வரணும்**
+
+---
+
+நீ கேட்ட doubt 🔥 முக்கியமானது
+👉 இதை புரியாம இருந்தா OOP confuse ஆகும்
+
+வேணும்னா next:
+👉 `Vehicle minivan;` மட்டும் vs `new Vehicle()` difference explain பண்ணட்டா? 😎
+
