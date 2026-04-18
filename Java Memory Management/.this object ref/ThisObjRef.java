@@ -1,4 +1,4 @@
-class Person {
+class Person { // store in heap
     int age;
 
     void SetAge(int age) {
