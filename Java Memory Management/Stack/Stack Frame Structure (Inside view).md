@@ -204,151 +204,143 @@ return 15
 
 ## மேல்கூறிய இது எல்லாமே stack உள்ளே நடப்பது தான்?
 
-சூப்பர் கேள்வி 🔥 — இங்க தான் many பேர் confuse ஆகுறாங்க.
-நேராக சொல்றேன் 👇
+ஆமாம் 👍 — **நீ சொல்வது mostly correct**
+ஆனா ஒரு small clarification இருக்குது — அதுதான் முக்கியம் 🔥
 
 ---
 
 # 🔹 Short answer
 
-👉 ❌ **Calculation RAMல நடக்காது**
-👉 ✔️ **CPUல தான் calculation நடக்கும்**
+👉 **ஆம்**
+👉 Frame உள்ளே இருக்கும்:
+
+* Local variables
+* Operand stack
+* Frame data
+
+👉 இவை **எல்லாமே Stack memoryக்குள்ள தான் இருக்கும்**
 
 ---
 
-# 🔹 RAM vs CPU role
+# 🔹 Clear structure (big picture)
 
-![Image](https://images.openai.com/static-rsc-4/GaqsSnLG9-TNu5npCRSg9MQ8lcz3rML1na4c03i6Zv8i_RV5wWNf8e1vayF3uACOJ6uosnifIzrmaFYD0a6PDu5F6cZACnT55xFphpMXhYa-BGMTQsCNF_Kq35NFr-P5kDH8tn-lTNPxCat-gGc5gPJfjjqhZSosAkFKEILkiX4NOoOB8Nph_S0LlbbPue04?purpose=fullsize)
+![Image](https://images.openai.com/static-rsc-4/rKZK8p9wOCYnt4SK1eVc2r-9hJwoS2hkCbPccpIQg1ADnnsXg7aY36UkgapkY2L6aVQ9CJmx_XIXUs-eaHyB7ZkzOPHIsL9uNU0Rp6p96Wx8exMjZ_Z9viATFcU7ACWUF-nmXjXeHVTYgRkdMkPr1_r4mpXhOZDHmv_30zzROY6QPCjhWxc4EwBsfJPpg_Wg?purpose=fullsize)
 
-![Image](https://images.openai.com/static-rsc-4/E8BubBiolQ2vb-YT6_4OaS2V7vZC47UkZ7QIYg4gfZJALF_NNWXunwBXQyuj3GniTOYGdW31Qb2kMYMTpSsLFy4ONNeMV5VcZzVBge16DVRbUL2zYpn9xfvR_oVWyQaLc4HOEBGZmi6P9DCH5pNa6VQm4RTkdl39Z2bwTSnjEWxtWICiMSrBlmQKV0o5Nhla?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/rNuYqkEw0nJPAAC5sVD5yYN_0QQ1jMbtCRmMYeIdXfzryWMWiSnTqB5BeEVHXL3Gh2clU-vNRa_yyXzUmX8fuzkXOccpmk1gk6qc4RAIIXuNyYREsS_j8AIFQ4-mcmEvKFCfoECMfjsrf5uVlryuGiAOsICdwAj3aLkiczlm8t9xOzJmfxdDV38zkTm3PgQw?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/4VJOb-mDIUbhXCgNGjcYL3c6IvgNacuVyOgZYeK0_DQ7A0NR9LBrvMcfI9LnTdykP4cZH5t8pH0fb4WNObwR3eFhrlbVa2jljEC_8aTOLKGsmJn8IupZ2SX3F0PkGU2YksRRlDgmmX37Dk3vJRuxGL-UIQ4WEdw-asExJosB5OlSDG6zFKOQmdDXfA8uDO1F?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/ao-Z4OYBeZ6TcWcPeRqitYbxVBMvQiLkmEE-PyCl2juVS_Ww2UBeyBb2ruCaadHB7RDCywO-cAaay4a58hGKxM3ztlMYl9Eo8Y5kFE8heS-eFr7TVvyhubft5XXwlFdwFimjBg6JS03eBLgeAPJYbQayka5sGErOHGNeHD7GKHsJpulQr-Tpzc9YIjqmy9Km?purpose=fullsize)
+![Image](https://images.openai.com/static-rsc-4/auYLAbFZWq9Y7VTJYns-42qn47RGOlklyi25Wsu5cXdSxMklactU5cNWSNfmY0j08vD8PLzZNZwULeRtMBQDq9JOhRCXcZrhd_1y3tkfh8zPVAvGwEdvVvxw-PMhCzaGzNCszVBhXBHi979S_GywJqKyrKMk6wzg60XjJeb3PG2D5vNFlHqIHidlVTPN3x6f?purpose=fullsize)
 
 ![Image](https://images.openai.com/static-rsc-4/wvqxnbmsp7AXR313ery42d-Z_xWKHt14VFdMF5vzOIgywLHMZ9dRGDmmX4UauETtAxMfqBBBA04aKm1G76FsUNBRk9YXVQAU1QevVahPyT-TpCI-2rm4hXtKYg6LmX4Brj091CrVPxkLzVuZ-Yrlsx60sNTpJjOD_LI51x0HYlfETcmbTaLegERhhizkJhJR?purpose=fullsize)
 
-👉 Roles:
+![Image](https://images.openai.com/static-rsc-4/7jvvcIwbYOBd8SyN5G_Jsph1JaPnhqDkyfR9zxtIblCjBTGsQYgNbI19wjowPOdt2ygiwZTpdDBZQAzmgllNMLNOcjj5mjr7S3fBd-CYpZxA2YDx1SARJIf8DCYhj7zLgCiLECmFTs_TRxmETdZ1F36H3KUZ0Emhwplx6EDjQTQNmpKxexRX_eJbLWmljskT?purpose=fullsize)
 
-### 🧠 CPU
+![Image](https://images.openai.com/static-rsc-4/mzqlp3DAgA3005CpPQpXlLlojfQnkkBSBDfIBgLZdV_QoJKrIAM8Tpj9YxMALuwky_BvYwQo2Z894rog_mNukC0nvY8Axyp69v2OqED-XCGrfVvugfuqBrWTYeDvuR31pQ9ZNgD-rzf0us87No0xq7Tm_G7lNQDue0QYn5knRAJ8EK3COpAYWfRlWKlseGMc?purpose=fullsize)
 
-* calculation பண்ணும்
-* ALU (Arithmetic Logic Unit) use பண்ணும்
+![Image](https://images.openai.com/static-rsc-4/bYbl_rE_FcsLbUMeihvqjwjoQozXJb14NB6OwDBOfugHR2yd7TOZFuUzXJx3GfDe6g6ZUBmeTL6cLGXdo-b3l7m6JxPC0R0TV-U9YMcyP6zMCImVu2uxNKsoW-w4hy7YcLe6Yhx8gUgd5IQIgoq-EJl7YkehAf0yCTkj8AKjNBOGrUZfGSxEKLEHGm13yomL?purpose=fullsize)
 
----
+👉 Structure:
 
-### 💾 RAM (Stack / Heap)
-
-* data store பண்ணும்
-* temporary values வைத்திருக்கும்
-
----
-
-# 🔹 Operand Stack actually என்ன?
-
-👉 இது RAMல இருக்கும் (stack memory)
-
-👉 ஆனால்:
-
-➡️ இது **calculation செய்யும் இடம் இல்லை**
-➡️ இது **calculationக்கு data ready பண்ணும் இடம்**
+```text
+Thread
+  ↓
+Stack
+  ↓
+Frames
+  ↓
+(Inside each Frame)
+   - Local variables
+   - Operand stack
+   - Frame data
+```
 
 ---
 
-# 🔹 Real flow (very important 🔥)
+# 🔹 Important clarification ⚠️
 
-Example:
+👉 Stackல நடக்குறது:
+
+✔️ variables store
+✔️ calculations (operand stack)
+✔️ method execution
+
+---
+
+👉 Stackல நடக்காதது:
+
+❌ objects store ஆகாது
+
+👉 Objects எங்கே?
+
+➡️ **Heapல தான் இருக்கும்**
+
+---
+
+# 🔹 Example (connect everything)
 
 ```java
-int c = a + b;
+Person p = new Person();
+int a = 10;
 ```
 
----
-
-## Step-by-step:
-
-### 1️⃣ Stackல values இருக்கும்
+👉 Memory:
 
 ```text
-a = 5
-b = 10
+Stack:              Heap:
+p  -----------\     
+a → 10          →   Person object
 ```
 
----
+👉 Stackல:
 
-### 2️⃣ Operand stack use ஆகும்
+* `p` (reference) ✔️
+* `a` (value) ✔️
 
-```text
-push 5
-push 10
-```
+👉 Heapல:
 
----
-
-### 3️⃣ CPU வேலை செய்யும் 🔥
-
-👉 CPU:
-
-➡️ 5 + 10 = 15 calculate பண்ணும்
+* object ✔️
 
 ---
 
-### 4️⃣ Result திரும்ப store
+# 🔹 Key understanding 🔥
 
-```text
-c = 15
-```
+👉 Frame உள்ளே:
 
----
+* reference மட்டும் இருக்கும்
+  👉 actual object:
 
-# 🔹 Simple analogy 🧠
-
-👉 RAM = table 🪑
-👉 CPU = மனிதன் 👨‍🔧
-
-👉 Tableல numbers வைச்சிருப்போம்
-👉 மனிதன் தான் calculate பண்ணுவான்
+➡️ heapல இருக்கும்
 
 ---
 
-# 🔹 Important understanding
+# 🔹 Super important rule
 
-👉 Operand stack:
-
-* data வைத்திருக்கும் ✔️
-* order maintain பண்ணும் ✔️
-
-👉 CPU:
-
-* actual math operation ✔️
+👉 **Stack = execution + references**
+👉 **Heap = actual objects**
 
 ---
 
 # 🔥 Final clarity
 
-👉 ❌ RAM calculation செய்யாது
-👉 ✔️ CPU தான் calculation செய்யும்
+👉 ✔️ ஆம் — Frame உள்ளே நடக்கும் எல்லாம் Stackல தான்
 
-👉 RAM + CPU சேர்ந்து தான் program run ஆகும்
+👉 ❌ ஆனால் object data மட்டும் Stackல இல்லை
 
 ---
 
 # 💡 One line
 
-👉 **“Operand stack stores data, CPU does the calculation”**
+👉 **“Frame operations → Stack, Object data → Heap”**
 
 ---
 
-🔥 நீ இப்ப hardware + JVM connection புரிஞ்சுட்டே 😎
+🔥 நீ இப்ப real JVM levelல think பண்ண ஆரம்பிச்சுட்டே 😎
 
-👉 next killer insight:
+👉 next killer concept:
 
-➡️ **JVM bytecode எப்படி CPUக்கு instruction அனுப்புது (JIT vs interpreter)**
+➡️ **Operand stack + bytecode execution (JVM எப்படி calculate பண்ணுது internally)**
 
-இதுதான் real engine 🔥
+இது தெரிஞ்சா நீ next level developer 🚀
 பாக்கலாமா?
+
+----
 
 ## இந்த கால்குலேஷன் எல்லாம் ram உள்ளையே நடந்து விடுமா `calculations (operand stack)` cpu போகாத?
 
