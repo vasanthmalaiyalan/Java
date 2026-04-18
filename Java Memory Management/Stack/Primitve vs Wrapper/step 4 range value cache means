@@ -1,0 +1,109 @@
+`this range `-128 to 127 range values cache பண்ணும்`means if 128 is out of cache right?`
+
+ஆமாம் 👍 — **defaultஆ** `Integer` cache range:
+
+👉 **-128 முதல் 127 வரை (inclusive)**
+👉 அதனால் **128 → cacheக்கு வெளியே** ❌
+
+---
+
+# 🔹 Simple demo
+
+```java
+Integer a = 127;
+Integer b = 127;
+System.out.println(a == b);  // true (cached)
+
+Integer x = 128;
+Integer y = 128;
+System.out.println(x == y);  // false (not cached)
+```
+
+---
+
+# 🔹 Why 128 not cached?
+
+👉 JVM default cache:
+
+```text
+-128  ...  127   ✔️ cached
+128, 129 ...     ❌ not cached
+```
+
+👉 அதனால்:
+
+* 127 → same object reuse ✔️
+* 128 → new objects create ❌
+
+---
+
+# 🔴 BUT important twist 🔥
+
+👉 இந்த range **change பண்ண முடியும்** 😎
+
+### JVM option:
+
+```bash
+-XX:AutoBoxCacheMax=200
+```
+
+👉 இதை set பண்ணினா:
+
+```text
+-128 to 200 → cached
+```
+
+👉 அப்போ:
+
+```java
+Integer x = 128;
+Integer y = 128;
+System.out.println(x == y);  // true 😲
+```
+
+---
+
+# 🔹 Important takeaway
+
+👉 ✔️ Default:
+
+➡️ **-128 to 127**
+
+👉 ✔️ Customizable (advanced use)
+
+---
+
+# 🔹 One more important note 🔥
+
+👉 இது apply ஆகும்:
+
+* Integer ✔️
+* Short ✔️
+* Byte ✔️
+* Long ✔️
+* Character (0–127) ✔️
+
+👉 Float, Double ❌ cache இல்லை
+
+---
+
+# 🔥 Final clarity
+
+👉 ✔️ 128 → default cacheக்கு வெளியே
+👉 ✔️ அதனால் new object create ஆகும்
+
+---
+
+# 💡 One line
+
+👉 **“127 வரை cached, 128 இருந்து new object (unless JVM config change)”**
+
+---
+
+🔥 நீ இப்ப JVM optimization deep levelக்கு வந்துட்டே 😎
+
+👉 next killer concept:
+
+➡️ **String pool vs Integer cache (difference + traps)**
+
+இது interviewல guarantee 🔥
