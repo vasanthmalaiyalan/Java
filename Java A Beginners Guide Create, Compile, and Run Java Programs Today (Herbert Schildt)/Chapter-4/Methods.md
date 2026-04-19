@@ -146,3 +146,189 @@ void
 ---
 
 இது தான் அந்த passageல exact meaning 👍
+
+---
+
+சரி 👍 இந்த முழு passageல என்ன எழுதப்பட்டதோ அதையே **simple தமிழில் மட்டும்** explain பண்ணுறேன் — extra concepts இல்லாமல் 👇
+
+---
+
+## 🧠 Adding a Method to the Vehicle Class – Explanation (Tamil)
+
+### 🔹 ஏன் method சேர்க்க வேண்டும்?
+
+👉 முன்பு:
+
+* `main()`ல தான் range calculate பண்ணினோம்
+
+👉 ஆனால்:
+
+* அது best design இல்லை ❌
+
+👉 ஏன்?
+
+* range = fuelcap + mpg மீது depend
+* இந்த data எல்லாம் `Vehicle` classக்குள் தான் இருக்கிறது
+
+👉 அதனால்:
+
+> range calculation → Vehicle class உள்ளே இருக்கணும் ✅
+
+---
+
+## 🔹 Method சேர்ப்பது
+
+```java
+class Vehicle { 
+  int passengers; 
+  int fuelcap;    
+  int mpg;        
+
+  void range() { 
+    System.out.println("Range is " + fuelcap * mpg); 
+  } 
+}
+```
+
+👉 இங்கே:
+
+* `range()` என்ற method add பண்ணப்பட்டுள்ளது
+* இது range calculate செய்து print பண்ணும்
+
+---
+
+## 🔹 முக்கியமான point ⚠️
+
+👉 `fuelcap` மற்றும் `mpg`:
+
+* directஆ use பண்ணப்பட்டுள்ளது
+* dot (`.`) use பண்ணவில்லை
+
+👉 ஏன்?
+
+* method classக்குள் இருக்கிறது
+* அது எந்த objectக்கு call ஆகிறதோ அந்த object dataயே use பண்ணும்
+
+---
+
+## 🔹 Full Program
+
+```java
+class Vehicle { 
+  int passengers; 
+  int fuelcap;    
+  int mpg;        
+
+  void range() { 
+    System.out.println("Range is " + fuelcap * mpg); 
+  } 
+} 
+
+class AddMeth { 
+  public static void main(String[] args) { 
+    Vehicle minivan = new Vehicle(); 
+    Vehicle sportscar = new Vehicle(); 
+
+    // assign values
+    minivan.passengers = 7; 
+    minivan.fuelcap = 16; 
+    minivan.mpg = 21; 
+
+    sportscar.passengers = 2; 
+    sportscar.fuelcap = 14; 
+    sportscar.mpg = 12; 
+
+    System.out.print("Minivan can carry " + minivan.passengers + ". "); 
+    minivan.range(); 
+
+    System.out.print("Sportscar can carry " + sportscar.passengers + ". "); 
+    sportscar.range(); 
+  } 
+}
+```
+
+---
+
+## 🔹 Output
+
+```text
+Minivan can carry 7. Range is 336
+Sportscar can carry 2. Range is 168
+```
+
+---
+
+## 🔹 range() method explanation
+
+```java
+void range() {
+```
+
+👉 இது:
+
+* method name = `range`
+* return type = `void` (value return இல்லை)
+* parameters இல்லை
+
+---
+
+```java
+System.out.println("Range is " + fuelcap * mpg);
+```
+
+👉 இது:
+
+* fuelcap × mpg calculate பண்ணி print பண்ணும்
+
+👉 ஒவ்வொரு objectக்கும்:
+
+* தனி fuelcap & mpg இருக்கும்
+  👉 அதனால் result objectக்கு object வேறாக வரும்
+
+---
+
+## 🔹 Method call
+
+```java
+minivan.range();
+```
+
+👉 இது:
+
+* minivan objectக்கு method call
+
+👉 flow:
+
+1. control → methodக்கு போகும்
+2. method execute ஆகும்
+3. முடிந்ததும் → control back வரும்
+
+---
+
+## 🔹 Important concept ⚠️
+
+👉 method உள்ளே:
+
+* `fuelcap`, `mpg` directஆ use பண்ணலாம்
+
+👉 காரணம்:
+
+* method எப்போதும் ஒரு object மூலம் call ஆகும்
+
+👉 அதனால்:
+
+> அந்த object data automatically use ஆகும்
+
+---
+
+## ⚡ Final Summary
+
+👉 range calculation → class உள்ளே இருக்க வேண்டும்
+👉 method = class behavior
+👉 method call → object மூலம்
+👉 variables directஆ access பண்ணலாம் (dot இல்லாமல்)
+
+---
+
+இது தான் அந்த passageல exact meaning 👍
+

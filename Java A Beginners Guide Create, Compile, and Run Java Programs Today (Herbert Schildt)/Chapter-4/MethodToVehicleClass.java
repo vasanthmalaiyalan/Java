@@ -3,7 +3,7 @@ class Vehicle {
     int fuelcap;
     int mpg;
 
-    void range() {
+    void range() { // method range
         System.out.println("Range is " + fuelcap * mpg);
     }
 }
