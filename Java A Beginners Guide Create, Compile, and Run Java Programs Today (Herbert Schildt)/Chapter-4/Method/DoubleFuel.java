@@ -12,7 +12,7 @@ class Vehicle {
     }
 }
 
-class DoubleFuel {
+class NoPublicClass {
     public static void main(String[] args) {
         Vehicle minivan = new Vehicle();
         Vehicle sportscar = new Vehicle();
