@@ -220,3 +220,38 @@ java.lang.OutOfMemoryError: Java heap space
 ➡️ **Garbage Collection எப்படி identify பண்ணுது unused objects**
 
 இது super important 🔥
+
+----
+
+Five tabs-ல் complete coverage. Key concepts:
+
+---
+
+## Book-ல் இருக்கும் exact code — line-by-line trace
+
+```java
+int x = 5;           // Stack → value 5 directly. No Heap involved.
+Person p = new Person(); // Heap → Person object. Stack → p holds address.
+p.setName("maaike"); // Heap → String "maaike" object. Person.name → its address.
+p.setHobby("coding"); // Heap → String "coding" object. Person.hobby → its address.
+```
+
+Book "simplified view" என்று சொல்றது correct — String-ஐ Person-ல் draw பண்றது easy, ஆனால் actually String-உம் separate Heap object.
+
+---
+
+## Object-ல் object — reference chain
+
+Primitive field (`int age`) → object-ஓட Heap block-க்கு **inside** directly store ஆகும். Object field (`String name`, `Address address`) → அந்த field-ல் **another Heap object-க்கான address** மட்டும் இருக்கும். இது chain-ஆக போகலாம் — Person → Address → String → char array.
+
+---
+
+## Heap = globally accessible
+
+அதனால் தான் method-க்கு object pass பண்ணும் போது — **address copy** ஆகும் (Java is pass-by-value, but the value is the reference). அந்த address-ஐ use பண்ணி method-ல் object mutate பண்ணினா caller-உக்கும் visible. ஆனால் reference reassign பண்ணினா caller-ஓட reference affect ஆகாது.
+
+---
+
+## OutOfMemoryError — three causes
+
+Static collection growing forever most common Java memory leak. GC collect பண்ண முடியாது — reference இருக்கும் வரை object alive. Fix: `WeakHashMap`, bounded LRU cache, அல்லது explicit `remove()`.
