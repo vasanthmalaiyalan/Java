@@ -1,6 +1,6 @@
 class Account {
     int balance;  // primitive
-    String owner; // object (wrapper(heap) - like reference)
+    String owner; // object (wrapper(heap) - like reference)/separate
 
     void deposit(int amount) {
         balance += amount;
