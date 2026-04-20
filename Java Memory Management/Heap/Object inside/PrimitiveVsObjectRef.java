@@ -1,4 +1,4 @@
-class person {
+class Person {
     int age; // primitive
     String name; // reference (object)
 
@@ -12,7 +12,7 @@ public class PrimitiveVsObjectRef {
     public static void main(String[] args) {
 
         // object creation
-        person p = new person();
+        Person p = new Person();
 
         // Assign values
         p.age = 25; // primitive (direct value)
