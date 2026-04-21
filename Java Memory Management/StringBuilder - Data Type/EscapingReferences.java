@@ -6,7 +6,7 @@ class Person {
     }
 
     public StringBuilder getName() {
-        return name; // direct reference assign
+        return name; // direct reference assign -> return type print actual output
     }
 }
 
