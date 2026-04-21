@@ -2,11 +2,11 @@ class Person {
     private StringBuilder name;
 
     Person(StringBuilder name) {
-        this.name = name;
+        this.name = name; // direct reference assign
     }
 
     public StringBuilder getName() {
-        return name;
+        return name; // direct reference assign
     }
 }
 
