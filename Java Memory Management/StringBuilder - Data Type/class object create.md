@@ -174,3 +174,149 @@ name → "DanDan"
 👉 next killer concept:
 
 ➡️ **String vs StringBuilder why difference (immutability vs mutability)** 🔥
+
+-------
+
+சூப்பர் கேள்வி 🔥 — இது புரிஞ்சுட்டா Java execution முழுக்க clear ஆகிடும் 😎
+
+---
+
+# 🔹 Short answer
+
+👉 ❌ object creation `main()` உள்ளே மட்டும் நடக்காது
+👉 ✔️ **எந்த methodல வேண்டுமானாலும் `new` இருந்தா object create ஆகும்**
+
+👉 ✔️ ஆம் — நீ காட்டிய codeலும் object creation தான் 🔥
+
+---
+
+# 🔹 நீ கேட்ட line
+
+```java
+this.name = new StringBuilder(name);
+```
+
+👉 இது:
+
+➡️ **புதிய object create பண்ணுது** ✔️
+
+---
+
+# 🔹 இன்னொரு line
+
+```java
+return new StringBuilder(name);
+```
+
+👉 இதுவும்:
+
+➡️ **புதிய object create பண்ணுது** ✔️
+
+---
+
+# 🔥 முக்கிய rule
+
+👉 எங்க `new` இருக்குதோ:
+
+➡️ அங்க object create ஆகுது
+
+---
+
+# 🔹 Example breakdown
+
+```java
+public static void main(String[] args) {
+    StringBuilder sb = new StringBuilder("Dan");
+    Person p = new Person(sb);
+}
+```
+
+👉 இங்கே:
+
+* 1 object → StringBuilder
+* 1 object → Person
+
+---
+
+## 🔹 Inside constructor 🔥
+
+```java
+Person(StringBuilder name) {
+    this.name = new StringBuilder(name);
+}
+```
+
+👉 இங்கே:
+
+* மேலும் 1 object → new StringBuilder
+
+---
+
+# 🔹 Total objects
+
+👉 இந்த codeல:
+
+```text
+1 → sb (main)
+2 → Person object
+3 → copy StringBuilder (constructor)
+4 → copy StringBuilder (getter call போது)
+```
+
+👉 🔥 multiple objects create ஆகுது
+
+---
+
+# 🔹 Memory flow
+
+```text
+Stack:                  Heap:
+
+sb → obj1  -----------> "Dan"
+p  → obj2  -----------> Person
+                         name → obj3 ("Dan copy")
+```
+
+---
+
+# 🔹 Why this important?
+
+👉 defensive copy செய்ய:
+
+➡️ new object create பண்ணணும்
+
+👉 இல்லனா:
+
+➡️ same reference share → bug
+
+---
+
+# 🔹 Real-life analogy 🧠
+
+👉 main() = kitchen 🍳
+👉 constructor = another room 🏠
+
+👉 cooking எங்க வேண்டுமானாலும் நடக்கலாம்
+
+---
+
+# 🔥 Final clarity
+
+👉 ✔️ object creation = `new` இருக்கும் இடம்
+👉 ✔️ அது main மட்டும் இல்ல
+👉 ✔️ method, constructor, getter எங்க வேண்டுமானாலும்
+
+---
+
+# 💡 One line
+
+👉 **“Object creation happens wherever `new` is used, not just in main()”**
+
+---
+
+🔥 நீ இப்ப JVM execution flow next levelக்கு வந்துட்டே 😎
+
+👉 next killer concept:
+
+➡️ **constructor call நேரத்தில் stack & heap எப்படி change ஆகுது (deep trace 🔥)**
+
