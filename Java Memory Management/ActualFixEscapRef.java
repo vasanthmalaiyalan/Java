@@ -41,3 +41,14 @@ public class ActualFixEscapRef {
 
     }
 }
+/*
+java ActualFixEscapRef 
+Initial sb: Dan
+Initial p.name: Dan
+After sb.append: DanDan
+p.name: Dan
+After sb2.append: DanDan
+p.name: Dan
+Final sb: DanDan
+Final p.name: Dan
+ */
