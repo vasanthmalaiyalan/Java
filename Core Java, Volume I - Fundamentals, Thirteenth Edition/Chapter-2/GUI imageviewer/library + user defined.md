@@ -200,3 +200,168 @@ Java GUI program = Mostly library usage + little custom logic
 👉 “இந்த event listener எப்படி internally வேலை செய்கிறது?”
 
 அதை deep-ஆ போவோமா? 🚀
+
+--------
+
+சூப்பர் 🔥 இப்போ நீ கேட்டது **“இந்த programல என்ன என்ன pre-defined (Java libraryல இருக்கும்)?”** — இதை clear categories-ஆ break பண்ணுறேன் 👇
+
+---
+
+# 📘 முதலில் basic rule
+
+```text
+Pre-defined = Java libraryல already இருக்கும்
+User-defined = நீ எழுதினது
+```
+
+---
+
+# 🧱 1. User-defined (நீ எழுதியது)
+
+👉 இவைகள் **pre-defined இல்ல ❌**
+
+```java
+public class ImageViewer
+class ImageViewerFrame
+DEFAULT_WIDTH
+DEFAULT_HEIGHT
+frame (variable)
+label, chooser, menuBar போன்ற variables
+```
+
+👉 இவை எல்லாம்:
+👉 **நீ create பண்ணியது**
+
+---
+
+# 📦 2. Pre-defined Classes (மிக முக்கியம் 🔥)
+
+👉 Java libraryல இருந்து வரும் classes:
+
+* EventQueue
+* JFrame
+* JLabel
+* JFileChooser
+* JMenuBar
+* JMenu
+* JMenuItem
+* ImageIcon
+* File
+* System
+
+👉 இவை எல்லாம்:
+
+```text
+Java API (pre-built library)
+```
+
+---
+
+# ⚙️ 3. Pre-defined Methods
+
+👉 இவை எல்லாம் Java already கொடுத்த methods ✅
+
+```java
+invokeLater()
+setTitle()
+setDefaultCloseOperation()
+setVisible()
+setSize()
+add()
+setCurrentDirectory()
+setJMenuBar()
+addActionListener()
+showOpenDialog()
+getSelectedFile()
+getPath()
+setIcon()
+System.exit()
+```
+
+👉 இவை:
+👉 **classல define பண்ணப்பட்ட functions**
+
+---
+
+# 🔢 4. Pre-defined Constants
+
+👉 Java already define பண்ணிய values:
+
+```java
+JFrame.EXIT_ON_CLOSE
+JFileChooser.APPROVE_OPTION
+```
+
+👉 இவை:
+
+```text
+static final variables (constants)
+```
+
+---
+
+# 🧠 5. Pre-defined Concepts (hidden but important)
+
+👉 இவையும் Java built-in:
+
+* `String` class
+* `var` (type inference keyword)
+* Lambda (`() ->`)
+* Event handling system
+
+---
+
+# 📊 Full classification table
+
+| Type           | Example        | Pre-defined? |
+| -------------- | -------------- | ------------ |
+| Class          | JFrame, JLabel | ✅            |
+| Method         | setTitle()     | ✅            |
+| Constant       | EXIT_ON_CLOSE  | ✅            |
+| Variable       | frame, label   | ❌            |
+| Class (custom) | ImageViewer    | ❌            |
+
+---
+
+# 🔥 Important insight
+
+👉 இந்த programல:
+
+```text
+90% code = Java library
+10% code = உன் logic
+```
+
+👉 அதனால தான் Java powerful 😎
+
+---
+
+# 💡 Simple understanding
+
+```text
+நீ:
+👉 objects create பண்ணுற
+👉 methods call பண்ணுற
+
+Java:
+👉 actual வேலை எல்லாம் handle பண்ணுது
+```
+
+---
+
+# 🚀 Final takeaway
+
+```text
+Java = Ready-made classes + methods + constants
+```
+
+👉 நீ just connect பண்ணுற 🔥
+
+---
+
+👉 நீ இப்போ next level question கேட்கப் போறாய் 😄
+
+👉 “இந்த methods எல்லாம் எப்படி internal-ஆ வேலை செய்கிறது?”
+
+அதை explain பண்ணலாமா? 🚀
+
