@@ -2,7 +2,7 @@ public class DataTypeDemo {
     public static void main(String[] args) {
         // ========= Integer Types ==========
         int a = 100;
-        long population = 8_000_000_000L
+        long population = 8_000_000_000L;
         byte small = 120;
         short medium = 30000; 
 
@@ -10,7 +10,7 @@ public class DataTypeDemo {
         System.out.println("int a = " + a);
         System.out.println("long population = " + population);
         System.out.println("byte small = " + small);
-        System.out,println("byte medium = " + medium);
+        System.out.println("byte medium = " + medium);
 
         //=========== Integer Formats ==========
         int hex = 0XCAFE;
@@ -43,9 +43,9 @@ public class DataTypeDemo {
         System.out.println("2.0 - 1.1 = " + result);
 
         // === SPECIAL VALUES =======
-        double posInF = 1.0 / 0;
+        double posInf = 1.0 / 0;
         double negInf = -1.0 / 0;
-        double man = 0.0 / 0;
+        double nan = 0.0 / 0;
 
         System.out.println("\nSpecial values:");
         System.out.println("Positive Infinity = " + posInf);
