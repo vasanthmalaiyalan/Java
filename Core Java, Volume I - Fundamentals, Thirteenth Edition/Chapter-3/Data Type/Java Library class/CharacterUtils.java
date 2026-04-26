@@ -3,7 +3,7 @@ public final class CharacterUtils {
 
     // ======= CONSTANTS ==========
     private static final int MIN_SUPPLEMENTARY_CODE_POINT = 0x10000;
-    private static final int MAX_CODE_POINT = 0x10FFFF;
+    private static final int MAX_CODE_POINT = 0x10FFFF; // Maximum valid Unicode code point
 
     private static final int MIN_HIGH_SURROGATE = 0xD800;
     private static final int MIN_LOW_SURROGATE = 0xDC00;
